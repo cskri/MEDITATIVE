@@ -12,8 +12,8 @@ MEDITATIVE will be a tool to escape from the stress of today, by allowing yourse
 
 
 ### MoSCoW Requirements ###
-##### M: The app must be able to play music (Media Player) from a library of selected songs and sounds. #####
-# S: The app should feature a Diary tab that allows the user to choose their current mood and describe their thoughts and feelings.  #
-# C: The app could have a funtion for the user to choose their mood and thereby play a sound track based on the current mood. #
-# W: It would be nice for the app to have an inspiration page with recommendations on how to improve your day and mood based on historical mood data from the journal. #
+###### M: The app must be able to play music (Media Player) from a library of selected songs and sounds. ######
+###### S: The app should feature a Diary tab that allows the user to choose their current mood and describe their thoughts and feelings.  ######
+###### C: The app could have a funtion for the user to choose their mood and thereby play a sound track based on the current mood. ######
+###### W: It would be nice for the app to have an inspiration page with recommendations on how to improve your day and mood based on historical mood data from the journal. ######
 
