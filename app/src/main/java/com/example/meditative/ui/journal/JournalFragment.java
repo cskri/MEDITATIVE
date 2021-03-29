@@ -1,4 +1,4 @@
-package com.example.meditative.ui.dashboard;
+package com.example.meditative.ui.journal;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.meditative.R;
 
-public class DashboardFragment extends Fragment {
+public class JournalFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private JournalViewModel journalViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        journalViewModel =
+                new ViewModelProvider(this).get(JournalViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_journal, container, false);
+        final TextView textView = root.findViewById(R.id.text_notifications);
+        journalViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
