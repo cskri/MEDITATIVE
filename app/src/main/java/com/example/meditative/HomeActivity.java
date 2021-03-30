@@ -106,6 +106,7 @@ public class HomeActivity extends AppCompatActivity implements MediaPlayer.OnErr
             playPause.setEnabled(true);
             playPause.setBackgroundResource(R.drawable.ic_pause_24);
             playerInitiated = true;
+            musicLabel.setText(mp.getTrackInfo().toString());
     }
 
     @Override
