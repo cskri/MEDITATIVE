@@ -38,8 +38,6 @@ public class HomeActivity extends AppCompatActivity implements MediaPlayer.OnErr
     ImageButton playPause;
     MediaPlayer mp;
     TextView musicLabel;
-    String filepath = "C:\\Users\\caspe\\AndroidStudioProjects\\MEDITATIVE\\app\\src\\main\\res\\raw\\countdown_with_voice_and_sound_effects.mp3";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,7 +104,7 @@ public class HomeActivity extends AppCompatActivity implements MediaPlayer.OnErr
             playPause.setEnabled(true);
             playPause.setBackgroundResource(R.drawable.ic_pause_24);
             playerInitiated = true;
-            musicLabel.setText(mp.getTrackInfo().toString());
+
     }
 
     @Override
