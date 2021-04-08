@@ -106,6 +106,9 @@ public class HomeActivity extends AppCompatActivity implements MediaPlayer.OnErr
             playerInitiated = true;
 
     }
+    public MediaPlayer getMp(){
+        return mp;
+    }
 
     @Override
     public boolean onError(MediaPlayer mp, int what, int extra) {
