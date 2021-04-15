@@ -22,7 +22,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class JournalFragment extends Fragment {
 
     private JournalViewModel journalViewModel;
-    FloatingActionButton addButton;
+
     RecyclerView recyclerView;
     View root;
 
@@ -32,15 +32,7 @@ public class JournalFragment extends Fragment {
         journalViewModel =
                 new ViewModelProvider(this).get(JournalViewModel.class);
         root = inflater.inflate(R.layout.fragment_journal, container, false);
-        addButton = (FloatingActionButton) root.findViewById(R.id.floatingActionButton);
         recyclerView = (RecyclerView) root.findViewById(R.id.listOfNotes);
-        addButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent i = new Intent(getContext(), AddJournal.class);
-                startActivity(i);
-            }
-        });
 
 
 

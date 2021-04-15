@@ -11,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
@@ -25,6 +26,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.meditative.ui.home.HomeViewModel;
+import com.example.meditative.ui.journal.AddJournal;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.io.File;
@@ -35,7 +37,7 @@ import java.util.Date;
 public class HomeActivity extends AppCompatActivity implements MediaPlayer.OnErrorListener, MediaPlayer.OnPreparedListener {
     Date date = Calendar.getInstance().getTime();
     Boolean playerInitiated = false;
-    ImageButton playPause;
+    ImageButton playPause, addNote;
     MediaPlayer mp;
     TextView musicLabel;
 
@@ -47,6 +49,7 @@ public class HomeActivity extends AppCompatActivity implements MediaPlayer.OnErr
         musicLabel = (TextView) findViewById(R.id.songTextLabel);
         final TextView textView = (TextView) findViewById(R.id.nameView);
         playPause=(ImageButton) findViewById(R.id.playbutton);
+        addNote = (ImageButton) findViewById(R.id.imageButton);
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
         mp = new MediaPlayer();
         mp.setAudioAttributes(new AudioAttributes.Builder()
@@ -77,6 +80,10 @@ public class HomeActivity extends AppCompatActivity implements MediaPlayer.OnErr
         NavigationUI.setupWithNavController(navView, navController);
     }
 
+    public void newNote(View view){
+        Intent i = new Intent(this, AddJournal.class);
+        startActivity(i);
+    }
     public void play(View view){
         if(!playerInitiated){
             playPause.setEnabled(false);

@@ -26,9 +26,7 @@ public class AddJournal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_journal);
         note = findViewById(R.id.editTextTextMultiLine);
-        happy = findViewById(R.id.happy);
-        neutral = findViewById(R.id.neutral);
-        sad = findViewById(R.id.sad);
+
 
         //get current date and time
         c = Calendar.getInstance();
