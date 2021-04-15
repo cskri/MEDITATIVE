@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MEDITATIVE">
-        <activity android:name=".AddJournal"></activity>
+        <activity android:name=".ui.journal.AddJournal"></activity>
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".HomeActivity"
