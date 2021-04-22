@@ -20,10 +20,10 @@ public class JournalDatabase extends SQLiteOpenHelper {
 
     // column names for DB table
     private static final String KEY_ID = "id";
+    private static final String KEY_MOOD = "mood";
     private static final String KEY_CONTENT = "content";
     private static final String KEY_DATE = "date";
     private static final String KEY_TIME = "time";
-    private static final String KEY_MOOD = "mood";
 
     public JournalDatabase(Context context){
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -32,8 +32,9 @@ public class JournalDatabase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // CREATE TABLE nametable(id INT PRIMARY KEY, content TEXT, date TEXT, time TEXT, mood INT);
-        String query = "CREATE TABLE " + DATABASE_TABLE + " ("+ KEY_ID+" INT PRIMARY KEY," +
-                KEY_MOOD + " INT,"+
+        String query = "CREATE TABLE " + DATABASE_TABLE + " ("+
+                KEY_ID+" INTEGER PRIMARY KEY," +
+                KEY_MOOD + " INTEGER,"+
                 KEY_CONTENT + " TEXT,"+
                 KEY_DATE + " TEXT,"+
                 KEY_TIME + " TEXT"+")";
@@ -62,23 +63,27 @@ public class JournalDatabase extends SQLiteOpenHelper {
     }
     public Note getNote(long id){
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(DATABASE_TABLE,new String[]{KEY_ID,KEY_MOOD,KEY_CONTENT,KEY_DATE,KEY_TIME}, KEY_ID+"=?", new String[]{String.valueOf(id)},null,null,null);
-        if (cursor != null){
-            cursor.moveToFirst();
-        }
-        Note note = new Note(cursor.getLong(0), cursor.getInt(1),cursor.getString(2), cursor.getString(3), cursor.getString(4));
-        return note;
+        String[] query = new String[] {KEY_ID,KEY_MOOD,KEY_CONTENT,KEY_DATE,KEY_TIME};
+        Cursor cursor = db.query(DATABASE_TABLE,query, KEY_ID+"=?", new String[]{String.valueOf(id)},null,null,null,null);
+        if (cursor != null) cursor.moveToFirst();
+
+        return new Note(
+                Long.parseLong(cursor.getString(0)),
+                Integer.parseInt(cursor.getString(1)),
+                cursor.getString(2),
+                cursor.getString(3),
+                cursor.getString(4));
     }
     public List<Note> getNotes(){
         SQLiteDatabase db = this.getReadableDatabase();
         List<Note> allNotes = new ArrayList<>();
-        String query = "SELECT * FROM "+DATABASE_TABLE;
+        String query = "SELECT * FROM "+DATABASE_TABLE+" ORDER BY " +KEY_ID+" DESC";
         Cursor cursor = db.rawQuery(query, null);
         if(cursor.moveToFirst()){
             do{
                 Note note = new Note();
-                note.setID(cursor.getLong(0));
-                note.setMood(cursor.getInt(1));
+                note.setID(Long.parseLong(String.valueOf(cursor.getLong(0))));
+                note.setMood(Integer.parseInt(String.valueOf(cursor.getInt(1))));
                 note.setContent(cursor.getString(2));
                 note.setDate(cursor.getString(3));
                 note.setTime(cursor.getString(4));

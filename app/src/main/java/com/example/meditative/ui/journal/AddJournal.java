@@ -23,7 +23,7 @@ public class AddJournal extends AppCompatActivity {
     Calendar c;
     String todaysDate;
     String currentTime;
-    int mood;
+    int mood = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
