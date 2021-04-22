@@ -61,34 +61,37 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/happy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFFFFF"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#FFFFFF"
             android:thumb="@drawable/ic_happy_24"
-            android:thumbTint="#FFFDFD" />
+            android:thumbTint="#FFFDFD"
+            android:onClick="happySwitch"/>
 
         <Switch
-            android:id="@+id/switch3"
+            android:id="@+id/neutral"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFFFFF"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#FFFFFF"
             android:thumb="@drawable/ic_neutral_24"
-            android:thumbTint="#FFFDFD" />
+            android:thumbTint="#FFFDFD"
+            android:onClick="neutralSwitch"/>
 
         <Switch
-            android:id="@+id/switch4"
+            android:id="@+id/sad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFFFFF"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#FFFFFF"
             android:thumb="@drawable/ic_sad_24"
-            android:thumbTint="#FFFDFD" />
+            android:thumbTint="#FFFDFD"
+            android:onClick="sadSwitch"/>
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -99,6 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:onClick="backButton"
         app:icon="@drawable/abc_vector_test"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -110,6 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:onClick="saveButton"
         app:icon="@drawable/ic_baseline_check_white_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -7,7 +7,7 @@ public class Note {
     private String date;
     private String time;
 
-    Note(){
+    public Note(){
 
     }
     Note(int mood, String content, String date, String time){
@@ -16,7 +16,7 @@ public class Note {
         this.date = date;
         this.time = time;
     }
-    Note (long id, int mood, String content, String date, String time){
+    public Note(long id, int mood, String content, String date, String time){
         this.ID = id;
         this.mood = mood;
         this.content = content;

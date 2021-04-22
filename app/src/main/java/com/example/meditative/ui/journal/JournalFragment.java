@@ -13,11 +13,16 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.meditative.Adapter;
+import com.example.meditative.JournalDatabase;
 import com.example.meditative.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+
+import java.util.List;
 
 public class JournalFragment extends Fragment {
 
@@ -25,6 +30,8 @@ public class JournalFragment extends Fragment {
 
     RecyclerView recyclerView;
     View root;
+    Adapter adapter;
+    List<Note> notes;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -32,8 +39,13 @@ public class JournalFragment extends Fragment {
         journalViewModel =
                 new ViewModelProvider(this).get(JournalViewModel.class);
         root = inflater.inflate(R.layout.fragment_journal, container, false);
-        recyclerView = (RecyclerView) root.findViewById(R.id.listOfNotes);
 
+        JournalDatabase db = new JournalDatabase(root.getContext());
+        notes = db.getNotes();
+        recyclerView = (RecyclerView) root.findViewById(R.id.listOfNotes);
+        recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
+        adapter = new Adapter(root.getContext(), notes);
+        recyclerView.setAdapter(adapter);
 
 
         return root;
