@@ -15,8 +15,8 @@ import java.util.List;
 public class JournalDatabase extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 2;
-    private static final String DATABASE_NAME = "journaldb";
-    private static final String DATABASE_TABLE = "journals";
+    private static final String DATABASE_NAME = "journaldb1";
+    private static final String DATABASE_TABLE = "journals1";
 
     // column names for DB table
     private static final String KEY_ID = "id";
@@ -31,7 +31,6 @@ public class JournalDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // CREATE TABLE nametable(id INT PRIMARY KEY, content TEXT, date TEXT, time TEXT, mood INT);
         String query = "CREATE TABLE " + DATABASE_TABLE + " ("+
                 KEY_ID+" INTEGER PRIMARY KEY," +
                 KEY_MOOD + " INTEGER,"+

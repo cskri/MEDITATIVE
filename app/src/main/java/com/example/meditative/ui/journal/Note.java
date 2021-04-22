@@ -10,7 +10,7 @@ public class Note {
     public Note(){
 
     }
-    Note(int mood, String content, String date, String time){
+    public Note(int mood, String content, String date, String time){
         this.mood = mood;
         this.content = content;
         this.date = date;
