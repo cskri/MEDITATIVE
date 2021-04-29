@@ -1,6 +1,7 @@
 package com.example.meditative;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.meditative.ui.journal.Details;
 import com.example.meditative.ui.journal.Note;
 
 import java.util.List;
@@ -35,6 +37,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         String date = notes.get(i).getDate();
         String time = notes.get(i).getTime();
         int mood = notes.get(i).getMood();
+        long id = notes.get(i).getID();
         holder.dateText.setText(date);
         holder.timeText.setText(time);
         if (mood == 1) holder.moodImage.setImageResource(R.drawable.ic_happy_24);
@@ -57,6 +60,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             dateText = itemView.findViewById(R.id.dateText);
             timeText = itemView.findViewById(R.id.timeText);
             moodImage = itemView.findViewById(R.id.moodImage);
+
+            itemView.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                  Intent i = new Intent(v.getContext(), Details.class);
+                  i.putExtra("ID",notes.get(getAdapterPosition()).getID());
+                  v.getContext().startActivity(i);
+                }
+            });
         }
     }
 }

@@ -92,5 +92,10 @@ public class JournalDatabase extends SQLiteOpenHelper {
         }
         return allNotes;
     }
+    public void deleteNote (long id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(DATABASE_TABLE, KEY_ID+"=?",new String[]{String.valueOf(id)});
+        db.close();
+    }
 
 }
