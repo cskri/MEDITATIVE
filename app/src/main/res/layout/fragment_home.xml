@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#474747"
     tools:context=".ui.home.HomeFragment">
 
 
@@ -12,14 +14,172 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
-        android:textColor="#9C9C9C"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_home">
+
+        <Button
+            android:id="@+id/settingsButton"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toStartOf="@+id/newJournal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/musicButton" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:elevation="8dp"
+            android:src="@drawable/ic_baseline_settings_24"
+            app:layout_constraintEnd_toEndOf="@+id/settingsButton"
+            app:layout_constraintStart_toStartOf="@+id/settingsButton"
+            app:layout_constraintTop_toTopOf="@+id/settingsButton" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:elevation="8dp"
+            android:text="Settings"
+            app:layout_constraintBottom_toBottomOf="@+id/settingsButton"
+            app:layout_constraintEnd_toEndOf="@+id/settingsButton"
+            app:layout_constraintStart_toStartOf="@+id/settingsButton"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <Button
+            android:id="@+id/newJournal"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/journalButton" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="8dp"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintEnd_toEndOf="@+id/newJournal"
+            app:layout_constraintStart_toStartOf="@+id/newJournal"
+            app:layout_constraintTop_toTopOf="@+id/newJournal" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="8dp"
+            android:text="New Journal"
+            app:layout_constraintBottom_toBottomOf="@+id/newJournal"
+            app:layout_constraintEnd_toEndOf="@+id/newJournal"
+            app:layout_constraintStart_toStartOf="@+id/newJournal"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <Button
+            android:id="@+id/journalButton"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="8dp"
+            android:src="@drawable/ic_journal_icon_24"
+            app:layout_constraintEnd_toEndOf="@+id/journalButton"
+            app:layout_constraintStart_toStartOf="@+id/journalButton"
+            app:layout_constraintTop_toTopOf="@+id/journalButton" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="8dp"
+            android:text="Track Mood"
+            app:layout_constraintBottom_toBottomOf="@+id/journalButton"
+            app:layout_constraintEnd_toEndOf="@+id/journalButton"
+            app:layout_constraintStart_toStartOf="@+id/journalButton"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <Button
+            android:id="@+id/musicButton"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="60dp"
+            android:onClick="openMusic"
+            app:layout_constraintEnd_toStartOf="@+id/journalButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="8dp"
+            android:src="@drawable/ic_music_icon_24"
+            app:layout_constraintEnd_toEndOf="@+id/musicButton"
+            app:layout_constraintStart_toStartOf="@+id/musicButton"
+            app:layout_constraintTop_toTopOf="@+id/musicButton" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="8dp"
+            android:text="Find Tunes"
+            app:layout_constraintBottom_toBottomOf="@+id/musicButton"
+            app:layout_constraintEnd_toEndOf="@+id/musicButton"
+            app:layout_constraintStart_toStartOf="@+id/musicButton"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

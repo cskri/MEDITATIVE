@@ -27,13 +27,13 @@ public class HomeViewModel extends AndroidViewModel {
         mText = new MutableLiveData<>();
         SharedPreferences pref = getApplication().getSharedPreferences("MyPref", 0);
         if(date.getHours()<=12) {
-            mText.setValue("Goodmorning " + pref.getString("UserName","User") + ", fancy some morning tunes?");
+            mText.setValue("What do you fancy this morning, " + pref.getString("UserName","User") + "?");
         }
         else if (date.getHours()<=17){
-            mText.setValue("Good Afternoon " + pref.getString("UserName","User") + ", how is it going so far?");
+            mText.setValue("A tune to lighten your mood, " + pref.getString("UserName","User") + "?");
         }
         else if(date.getHours()<=24){
-            mText.setValue("Good Evening " + pref.getString("UserName","User") + ", how has your day been?");
+            mText.setValue("Tell me about your day, " + pref.getString("UserName","User"));
         }
     }
 
