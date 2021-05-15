@@ -3,16 +3,11 @@ package com.example.meditative.ui.journal;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Switch;
-import android.widget.Toolbar;
 
-import com.example.meditative.JournalDatabase;
 import com.example.meditative.R;
-import com.google.android.material.chip.Chip;
 
 import java.util.Calendar;
 
@@ -39,7 +34,7 @@ public class AddJournal extends AppCompatActivity {
         c = Calendar.getInstance();
 
         todaysDate = c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH)+1) + "/" + c.get(Calendar.YEAR);
-        currentTime = pad(c.get(Calendar.HOUR)) + ":" + pad(c.get(Calendar.MINUTE));
+        currentTime = pad(c.get(Calendar.HOUR_OF_DAY)) + ":" + pad(c.get(Calendar.MINUTE));
     }
 
     private String pad(int i) {

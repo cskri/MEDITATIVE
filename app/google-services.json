@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "31904615453",
+    "project_id": "meditative-b433b",
+    "storage_bucket": "meditative-b433b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31904615453:android:f06fbeccb65ee6f39ecaf4",
+        "android_client_info": {
+          "package_name": "com.example.meditative"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31904615453-797qhmo38np5avkcgtm38gc1vetbptml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0dm6I662ii4ST2q3QynFVt0I_AsKTSHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "31904615453-797qhmo38np5avkcgtm38gc1vetbptml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

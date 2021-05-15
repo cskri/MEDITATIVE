@@ -1,7 +1,9 @@
-package com.example.meditative;
+package com.example.meditative.ui.journal;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,10 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.core.widget.ImageViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.meditative.ui.journal.Details;
-import com.example.meditative.ui.journal.Note;
+import com.example.meditative.R;
 
 import java.util.List;
 
@@ -40,9 +43,18 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         long id = notes.get(i).getID();
         holder.dateText.setText(date);
         holder.timeText.setText(time);
-        if (mood == 1) holder.moodImage.setImageResource(R.drawable.ic_happy_24);
-        else if (mood == 2) holder.moodImage.setImageResource(R.drawable.ic_neutral_24);
-        else if (mood == 3) holder.moodImage.setImageResource(R.drawable.ic_sad_24);
+        if (mood == 1){
+            holder.moodImage.setImageResource(R.drawable.ic_happy_24);
+            ImageViewCompat.setImageTintList(holder.moodImage, ColorStateList.valueOf(Color.parseColor("#FF39AE1F")));
+        }
+        else if (mood == 2){
+            holder.moodImage.setImageResource(R.drawable.ic_neutral_24);
+            ImageViewCompat.setImageTintList(holder.moodImage, ColorStateList.valueOf(Color.parseColor("#FFECD92B")));
+        }
+        else if (mood == 3){
+            holder.moodImage.setImageResource(R.drawable.ic_sad_24);
+            ImageViewCompat.setImageTintList(holder.moodImage, ColorStateList.valueOf(Color.parseColor("#FFCD3D3D")));
+        }
 
     }
 

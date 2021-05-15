@@ -1,4 +1,4 @@
-package com.example.meditative;
+package com.example.meditative.ui.journal;
 
 import android.content.ContentValues;
 import android.content.Context;
