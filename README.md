@@ -10,10 +10,15 @@ The motivation for creating this app is based on the fact that the world nowaday
 This will enable them to understand themselves and thereby live a richer and happier life on a day to day basis. 
 MEDITATIVE will be a tool to escape from the stress of today, by allowing yourself to calm down for a moment and relax. This will help by being able to cope with everyday challenges.
 
+## Link to video Demonstration: https://youtu.be/SPlThR7PO_4
 
 ### MoSCoW Requirements ###
-###### M: The app must be able to play music (Media Player) from a library of selected songs and sounds. ######
-###### S: The app should feature a Diary tab that allows the user to choose their current mood and describe their thoughts and feelings.  ######
-###### C: The app could have a funtion for the user to choose their mood and thereby play a sound track based on the current mood. ######
-###### W: It would be nice for the app to have an inspiration page with recommendations on how to improve your day and mood based on historical mood data from the journal. ######
+###### M: The app must be able to play music (Media Player) from a library of selected songs and sounds. - Delivered ######
+###### S: The app should feature a Diary tab that allows the user to choose their current mood and describe their thoughts and feelings. - Delivered  ######
+###### C: The app could have a funtion for the user to choose their mood and thereby play a sound track based on the current mood. - Not Delivered ######
+###### W: It would be nice for the app to have an inspiration page with recommendations on how to improve your day and mood based on historical mood data from the journal. - Not Delivered  ######
 
+# Sources & Inspiration
+- https://www.javatpoint.com/playing-audio-in-android-example
+- https://www.youtube.com/watch?v=3b5xxb8w7lI
+- https://www.youtube.com/watch?v=cBwaJYocb9I
