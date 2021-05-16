@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
-    private static LoginActivity instance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
