@@ -128,7 +128,7 @@ public class HomeActivity extends AppCompatActivity implements MediaPlayer.OnErr
             progress.setProgress(0);
             while (!Thread.currentThread().isInterrupted()) {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     return;
                 } catch (Exception e) {
