@@ -10,7 +10,7 @@ The motivation for creating this app is based on the fact that the world nowaday
 This will enable them to understand themselves and thereby live a richer and happier life on a day to day basis. 
 MEDITATIVE will be a tool to escape from the stress of today, by allowing yourself to calm down for a moment and relax. This will help by being able to cope with everyday challenges.
 
-## Link for video Demonstration: ## https://youtu.be/SPlThR7PO_4
+## Link for video Demonstration: https://youtu.be/SPlThR7PO_4
 
 ### MoSCoW Requirements ###
 ###### M: The app must be able to play music (Media Player) from a library of selected songs and sounds. - Delivered ######
