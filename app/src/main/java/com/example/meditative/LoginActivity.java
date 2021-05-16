@@ -9,13 +9,14 @@ import android.view.View;
 import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
-
+    private static LoginActivity instance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
     }
+
 
     public void login(View view) {
         EditText username = (EditText) findViewById(R.id.editText1);
@@ -24,10 +25,18 @@ public class LoginActivity extends AppCompatActivity {
         editor.putString("UserName", username.getText().toString());
         editor.putBoolean("hasLoggedIn", true);
         editor.commit();
-        Intent intent = new Intent();
-        intent.setClass(LoginActivity.this, HomeActivity.class);
-        startActivity(intent);
-        this.finish();
+        if(HomeActivity.active)
+        {
+            onBackPressed();
+        }
+        else
+        {
+            Intent intent = new Intent();
+            intent.setClass(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
+            this.finish();
+        }
+
     }
 
 }

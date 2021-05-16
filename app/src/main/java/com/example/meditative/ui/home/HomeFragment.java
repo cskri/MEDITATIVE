@@ -62,6 +62,8 @@ public class HomeFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
+
         settingsBtn = (Button) root.findViewById(R.id.settingsButton);
         settingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override

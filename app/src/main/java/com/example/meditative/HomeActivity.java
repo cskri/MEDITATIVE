@@ -49,11 +49,13 @@ public class HomeActivity extends AppCompatActivity implements MediaPlayer.OnErr
     TextView durationLabel;
     int audioDuration;
     static HomeActivity instance;
+    static boolean active = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        active = true;
         instance = this;
         musicLabel = (TextView) findViewById(R.id.songTextLabel);
         durationLabel = (TextView) findViewById(R.id.durationLabel);
